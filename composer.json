@@ -1,0 +1,6 @@
+{
+    "require": {
+        "react/stream": "^0.4.3",
+        "react/event-loop": "^0.4"
+    }
+}
