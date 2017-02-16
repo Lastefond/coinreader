@@ -1,37 +1,24 @@
 <?php
 
 require 'vendor/autoload.php';
-require 'extensions/SerialEmitter.php';
+require 'extensions/CoinProxy.php';
 
 use React\EventLoop\Factory;
+use mikk150\serial\SerialEmitter;
+use Ratchet\App;
 
 $config = require 'config/config.php';
 
 $loop = Factory::create();
-// $serialEmitter = new SerialEmitter($loop, '/dev/ttyUSB0', 2400);
-// $serialEmitter->on('data', function ($data) {
-//     echo $data;
-// });
-// 
 
-$fd = dio_open('/dev/ttyUSB0', O_RDWR | O_NOCTTY | O_NONBLOCK);
+$coinProxy = new CoinProxy;
 
-dio_fcntl($fd, F_SETFL, O_SYNC);
+$serialEmitter = new SerialEmitter($loop, '/dev/ttyUSB0', 115200);
+$serialEmitter->on('data', function ($data) use ($coinProxy) {
+    $coinProxy->broadcast($data);
+});
 
-dio_tcsetattr($fd, array(
-  'baud' => 2400,
-  'bits' => 8,
-  'stop'  => 1,
-  'parity' => 0
-)); 
+$app = new Ratchet\App('localhost', 8080, '127.0.0.1', $loop);
+$app->route('/coins', $coinProxy);
 
-while (1) {
-
-  $data = dio_read($fd, 256);
-
-  if ($data) {
-      echo ord($data);
-  }
-} 
-
-$loop->run();
+$app->run();
