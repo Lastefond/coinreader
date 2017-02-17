@@ -13,7 +13,7 @@ $loop = Factory::create();
 
 $coinProxy = new CoinProxy;
 
-$serialEmitter = new SerialEmitter($loop, '/dev/ttyUSB0', 115200);
+$serialEmitter = new SerialEmitter($loop, $config['coinreader']['device'], $config['coinreader']['baudrate']);
 $serialEmitter->on('data', function ($data) use ($coinProxy) {
     $coinProxy->broadcast($data);
 });
