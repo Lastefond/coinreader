@@ -15,7 +15,10 @@ $coinProxy = new CoinProxy;
 
 $serialEmitter = new SerialEmitter($loop, $config['coinreader']['device'], $config['coinreader']['baudrate']);
 $serialEmitter->on('data', function ($data) use ($coinProxy) {
-    $coinProxy->broadcast($data);
+    $coin = ord($data);
+    if ($coin !== 255) {
+        $coinProxy->broadcast($coin);
+    }
 });
 
 $app = new Ratchet\App('localhost', 8080, '127.0.0.1', $loop);

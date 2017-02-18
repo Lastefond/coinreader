@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "470cd0db78e0562717b50c742a9022a1",
     "content-hash": "632ffa47e7222bd94da5f6a9d6db69c2",
     "packages": [
         {
@@ -12,19 +13,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ratchetphp/Ratchet.git",
-                "reference": "a78c8d2ddff78aef1d05cbf08e8bdcf8c21e1b14"
+                "reference": "cc2bc79455f47f772c628dd32e313125f294a243"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ratchetphp/Ratchet/zipball/a78c8d2ddff78aef1d05cbf08e8bdcf8c21e1b14",
-                "reference": "a78c8d2ddff78aef1d05cbf08e8bdcf8c21e1b14",
+                "url": "https://api.github.com/repos/ratchetphp/Ratchet/zipball/cc2bc79455f47f772c628dd32e313125f294a243",
+                "reference": "cc2bc79455f47f772c628dd32e313125f294a243",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/psr7": "^1.0",
                 "php": ">=5.4.2",
                 "ratchet/rfc6455": "^0.2",
-                "react/socket": "^0.3 || ^0.4",
+                "react/socket": "^0.5",
                 "symfony/http-foundation": "^2.2|^3.0",
                 "symfony/routing": "^2.2|^3.0"
             },
@@ -57,7 +58,7 @@
                 "sockets",
                 "websocket"
             ],
-            "time": "2016-06-06 13:13:02"
+            "time": "2017-02-17 01:34:04"
         },
         {
             "name": "evenement/evenement",
@@ -103,7 +104,7 @@
                 "event-dispatcher",
                 "event-emitter"
             ],
-            "time": "2012-11-02T14:49:47+00:00"
+            "time": "2012-11-02 14:49:47"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -161,7 +162,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-06-24T23:00:38+00:00"
+            "time": "2016-06-24 23:00:38"
         },
         {
             "name": "mikk150/react-serial",
@@ -169,12 +170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikk150/react-serial.git",
-                "reference": "8bb0bd00328ee918a51904bed224c0b93323869f"
+                "reference": "2a9b4180bc38b653ea19a2a9fa0d17a0ce0c0996"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikk150/react-serial/zipball/8bb0bd00328ee918a51904bed224c0b93323869f",
-                "reference": "8bb0bd00328ee918a51904bed224c0b93323869f",
+                "url": "https://api.github.com/repos/mikk150/react-serial/zipball/2a9b4180bc38b653ea19a2a9fa0d17a0ce0c0996",
+                "reference": "2a9b4180bc38b653ea19a2a9fa0d17a0ce0c0996",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +193,7 @@
                 "GPLv2"
             ],
             "description": "Library to read linux serial",
-            "time": "2017-02-16 18:48:03"
+            "time": "2017-02-17 23:56:12"
         },
         {
             "name": "psr/http-message",
@@ -242,7 +243,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "ratchet/rfc6455",
@@ -290,7 +291,7 @@
                 "rfc6455",
                 "websocket"
             ],
-            "time": "2017-01-01T15:41:18+00:00"
+            "time": "2017-01-01 15:41:18"
         },
         {
             "name": "react/event-loop",
@@ -334,7 +335,7 @@
                 "asynchronous",
                 "event-loop"
             ],
-            "time": "2016-03-08T02:09:32+00:00"
+            "time": "2016-03-08 02:09:32"
         },
         {
             "name": "react/promise",
@@ -377,20 +378,20 @@
                 "promise",
                 "promises"
             ],
-            "time": "2016-12-22T14:09:01+00:00"
+            "time": "2016-12-22 14:09:01"
         },
         {
             "name": "react/socket",
-            "version": "v0.4.6",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/socket.git",
-                "reference": "cf074e53c974df52388ebd09710a9018894745d2"
+                "reference": "691dbf6cb3aa9ae67ef25d29c32e853d5d34fa99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/cf074e53c974df52388ebd09710a9018894745d2",
-                "reference": "cf074e53c974df52388ebd09710a9018894745d2",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/691dbf6cb3aa9ae67ef25d29c32e853d5d34fa99",
+                "reference": "691dbf6cb3aa9ae67ef25d29c32e853d5d34fa99",
                 "shasum": ""
             },
             "require": {
@@ -419,7 +420,7 @@
             "keywords": [
                 "Socket"
             ],
-            "time": "2017-01-26T09:23:38+00:00"
+            "time": "2017-02-14 06:49:09"
         },
         {
             "name": "react/stream",
@@ -463,20 +464,20 @@
                 "pipe",
                 "stream"
             ],
-            "time": "2017-01-25T14:44:14+00:00"
+            "time": "2017-01-25 14:44:14"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.2.3",
+            "version": "v3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "e192b04de44aa1ed0e39d6793f7e06f5e0b672a0"
+                "reference": "a90da6dd679605d88c9803a57a6fc1fb7a19a6e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e192b04de44aa1ed0e39d6793f7e06f5e0b672a0",
-                "reference": "e192b04de44aa1ed0e39d6793f7e06f5e0b672a0",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/a90da6dd679605d88c9803a57a6fc1fb7a19a6e0",
+                "reference": "a90da6dd679605d88c9803a57a6fc1fb7a19a6e0",
                 "shasum": ""
             },
             "require": {
@@ -516,7 +517,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-02T13:47:35+00:00"
+            "time": "2017-02-16 22:46:52"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -575,11 +576,11 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/routing",
-            "version": "v3.2.3",
+            "version": "v3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
@@ -650,7 +651,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-01-28T02:37:08+00:00"
+            "time": "2017-01-28 02:37:08"
         }
     ],
     "packages-dev": [],
