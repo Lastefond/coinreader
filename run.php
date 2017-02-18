@@ -13,7 +13,7 @@ $loop = Factory::create();
 
 $coinProxy = new CoinProxy;
 
-$serialEmitter = new SerialEmitter($loop, $config['coinreader']['device'], $config['coinreader']['baudrate']);
+$serialEmitter = new SerialEmitter($loop, $config['coinreader']['device'], $config['coinreader']['config']);
 $serialEmitter->on('data', function ($data) use ($coinProxy) {
     $coin = ord($data);
     if ($coin !== 255) {
