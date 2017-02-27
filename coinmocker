@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+
+require 'vendor/autoload.php';
+require 'extensions/CoinProxy.php';
+
+use React\EventLoop\Factory;
+use React\Stream\Stream as FileStreamer;
+use Ratchet\App;
+
+$config = require 'config/config.php';
+
+$loop = Factory::create();
+
+$coinProxy = new CoinProxy;
+
+$stream = fopen('php://stdin', 'rw+');
+
+$fileStreamer = new FileStreamer($stream, $loop);
+$fileStreamer->on('data', function ($coin) use ($coinProxy) {
+    $coinProxy->broadcast(trim($coin));
+});
+
+$app = new Ratchet\App('127.0.0.1', 8080, '0.0.0.0', $loop);
+$app->route('/coins', $coinProxy, ['*']);
+
+$app->run();
